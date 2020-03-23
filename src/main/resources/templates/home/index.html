@@ -5,6 +5,15 @@
     <title>Title</title>
 </head>
 <body>
+    Home Index
+    <p>
+        <select>
+            <#list languages as language>
+            <option value="${language.code}">${language.text}</option>
+            </#list>
+        </select>
 
+
+    </p>
 </body>
 </html>
