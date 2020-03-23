@@ -6,14 +6,36 @@
 </head>
 <body>
     Home Index
-    <p>
-        <select>
-            <#list languages as language>
-            <option value="${language.code}">${language.text}</option>
+    <form action="/database/test">
+        <p>
+            <select name="language">
+                <#list languages as language>
+                <option value="${language.code}">${language.text}</option>
             </#list>
-        </select>
-
-
-    </p>
+            </select>
+            <select  name="jdbcDriver">
+                <#list jdbcDrivers as jdbcDriver>
+                <option value="${jdbcDriver}">${jdbcDriver.title}</option>
+            </#list>
+            </select>
+        </p>
+        <p>
+            <label>Driver Class:</label>
+            <input type="text" name="driver">
+        </p>
+        <p>
+            <label>JDBC URL:</label>
+            <input type="text" name="url">
+        </p>
+        <p>
+            <label>User Name:</label>
+            <input type="text" name="user">
+        </p>
+        <p>
+            <label>Password:</label>
+            <input type="text" name="password">
+        </p>
+        <p><button type="submit">Test Connection</button></p>
+    </form>
 </body>
 </html>

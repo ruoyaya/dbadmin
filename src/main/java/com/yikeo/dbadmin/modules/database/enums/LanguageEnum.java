@@ -1,4 +1,4 @@
-package com.yikeo.dbadmin.common.enums;
+package com.yikeo.dbadmin.modules.database.enums;
 
 public enum LanguageEnum {
 
